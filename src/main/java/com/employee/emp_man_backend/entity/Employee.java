@@ -10,7 +10,7 @@ import jakarta.persistence.Table;
 public class Employee {
 
     @Id
-    @Column(name = "employee_id")
+    @Column(name = "employee_id",nullable=false,unique=true)
     private String employeeId;
 
     @Column(name = "first_name", nullable = false)
@@ -22,7 +22,7 @@ public class Employee {
     @Column(name = "email", nullable = false, unique = true)
     private String email;
 
-    @Column(name = "mobile")
+    @Column(name = "mobile",nullable=false,unique=true)
     private String mobile;
 
     @Column(name = "department")
